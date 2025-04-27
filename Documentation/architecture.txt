@@ -1,0 +1,19 @@
+com.ulbs.atomic_chess.atomicchess_backend
+├── controller
+│    ├── ChessController.java       <-- Handles HTTP requests (move, start game, AI move)
+│
+├── service
+│    ├── GameService.java            <-- Main chess logic (valid moves, game state)
+│    ├── AiService.java              <-- Simple AI (random move / basic logic / integrate stockfish later)
+│
+├── model
+│    ├── Board.java                  <-- Represents the chess board (2D array of pieces)
+│    ├── Piece.java                  <-- Abstract class for all chess pieces
+│    ├── Pawn.java                   <-- Example of a specific piece
+│    ├── Move.java                   <-- Represents a move (from-square, to-square)
+│    ├── GameState.java              <-- Holds the current board, whose turn, status (ongoing/checkmate)
+│
+├── repository (optional, if saving games)
+│    ├── GameRepository.java         <-- CRUD operations (using JPA if needed)
+│
+├── AtomicChessApplication.java      <-- Main application
